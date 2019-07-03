@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto-Light',sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+}
+
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.banner{
+    background-color: #333;
+    height: 200px;
+}
+.topInfo{
+    border: 3px dashed #eee;
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+    margin-top: -160px;
+    color: #fff;
+    box-sizing: border-box;
+}
+.topInfo .topInfo-left{
+    float: left;
+    margin: 20px auto 20px 20px;
+}
+.topInfo .topInfo-right{
+    float: right;
+    margin: 20px 20px 20px auto;
+}
+.topInfo-left > h1{
+    margin-bottom: 10px;
+    font-size: 48px;
+}
+.topInfo-left > p{
+    font-size: 26px;
+}
+.topInfo-right .media{
+    text-align: center;
+}
+.topInfo-right .media a{
+    background-color: #333;
+    display: inline-block;
+    border-radius: 50%;
+    width: 40px;
+    padding: 5px 0;
+    line-height: 30px;
+    margin: 16px 0 16px 16px;
+    transition: all 0.4s;
+}
+.topInfo-right .media svg{
+    height: 30px;
+    width: 30px;
+    fill: #fff;
+    vertical-align: top;
+}
+.topInfo-right .media svg:hover{
+    fill:#333;
+}
+.topInfo-right .media a:hover{
+    background-color: #fff;
+}
+.topInfo-right > p{
+    float: right;
+    margin-top: 10px;
+}
+
+.userCard{
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+.userCard > h2,
+.skills > h2,
+.portfolio > h2{
+    text-align: center;
+    border-bottom: 3px dashed #eee;
+    font-weight: 300;
+    font-size: 32px;
+}
+.userCard .welcome{
+    background: #333;
+    color: white;
+    display: inline-block;
+    padding: 4px 16px;
+    line-height: 22px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.userCard .welcome .triangle{
+    position: absolute;
+    display: block;
+    border:10px solid transparent;
+    border-left-color: #333;
+    border-top-width: 0px;
+    left: 4px;
+    top: 100%;
+}
+.userCard .pictureAndText{
+    padding: 40px 0;
+}
+.userCard .picture{
+    margin-left: 150px;
+    float: left;
+    width: 200px;
+    height: 200px;
+}
+.userCard .picture img{
+    width: 100%;
+}
+.userCard .text{
+    float: left;
+    margin-left: 100px;
+    width: 300px;
+}
+.userCard .text dt,
+.userCard .text dd{
+    float: left;
+    padding: 10px 0;
+    
+}
+.userCard .text dt{
+    width: 40%;
+    font-weight: bold;
+}
+.userCard .text dd{
+    width: 60%;
+}
+
+section.skills{
+    max-width: 900px;
+    margin: auto;
+}
+section.skills h3{
+    font-size: 14px;
+    line-height: 1.1;
+    padding-right: 40px;
+}
+section.skills>ol{
+    background-color: #fff;
+    padding: 42px 20px 10px 50px;
+    margin-top: 30px;
+}
+section.skills>ol>li{
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding-right: 30px;
+}
+section.skills .progressBar{
+    background-color: #aaa;
+    height: 5px;
+    border-radius: 5px;
+    margin: 4px 0 40px;
+}
+section.skills .progressBar>.progress{
+    height: 100%;
+    width: 70%;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+section.portfolio{
+    text-align: center;
+    max-width: 900px;
+    margin-bottom: 100px;
+    margin: auto;
+}
+section.portfolio > nav{
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 32px;
+}
+section.portfolio > nav > ol{
+    margin: 0 auto;
+    display: inline-block;
+    vertical-align: top;
+}
+section.portfolio > nav > ol > li{
+    float: left;
+    margin-left: 40px;
+    cursor: pointer;
+}
+section.portfolio > nav > ol > li:nth-child(1){
+    margin-left: 0;
+}
+section.portfolio > nav .bar{
+    height: 5px;
+    width: 260px;
+    margin-bottom: 28px;
+    border-radius: 5px;
+}
+section.portfolio > nav .bar-inner{
+    height: 100%;
+    background: #333;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+section.portfolio > nav .bar.state-1 .bar-inner{
+    margin-left: 0;
+    width: 22%;
+}
+section.portfolio > nav .bar.state-2 .bar-inner{
+    margin-left: 71px;
+    width: 35%;
+}
+section.portfolio > nav .bar.state-3 .bar-inner{
+    margin-left: 188px;
+    width: 23%;
+}
+section.portfolio .works{
+    position: relative;
+    height: 500px;
+}
+section.portfolio .works > .big,
+section.portfolio .works > .small{
+    position: absolute;
+}
+section.portfolio .works img{
+    width: 100%;
+}
