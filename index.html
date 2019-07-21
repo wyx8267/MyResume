@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,63 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="//at.alicdn.com/t/font_1270182_qjsgcu927we.js"></script>
     <style type="text/css">
+        .site-welcome {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ccc;
+            z-index: 1;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .site-welcome.active {
+            display: flex;
+        }
+
+        .loading {
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+
+        .loading::before,
+        .loading::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            background: #000;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            animation: s 1.5s linear infinite;
+        }
+
+        .loading::after {
+            animation-delay: 1s
+        }
+
+        @keyframes s {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 1;
+            }
+
+            100% {
+                width: 75px;
+                height: 75px;
+                opacity: 0;
+            }
+        }
+
         .icon {
             width: 1em;
             height: 1em;
@@ -17,8 +75,47 @@
         }
     </style>
 </head>
+
 <body>
+    <div class="site-welcome active" id="siteWelcome">
+        <div class="loading"></div>
+    </div>
+
     <div class="banner"></div>
+    <div class="topNavBar" id="topNavBar">
+        <div class="topNavBar-inner clearfix">
+            <a href="#" class="logo" alt="logo">
+                <span class="rs">My</span><span class="card">Resume</span>
+            </a>
+
+            <nav class="menu">
+                <ul class="clearfix">
+                    <li><a href="#siteAbout">关于</a></li>
+                    <li><a href="#siteSkills">技能</a></li>
+                    <li>
+                        <a href="#siteWorks">作品</a>
+                        <ul class="submenu">
+                            <li>作品1</li>
+                            <li>作品2</li>
+                            <li>作品3</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">博客</a>
+                        <ul class="submenu">
+                            <li>博客1</li>
+                            <li>博客2</li>
+                            <li>博客3</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">日历</a></li>
+                    <li><a href="#">联系方式</a></li>
+                    <li><a href="#">其他</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
     <div class="topInfo clearfix">
         <div class="topInfo-left">
             <h1>WYX</h1>
@@ -26,33 +123,33 @@
         </div>
         <div class="topInfo-right">
             <div class="media">
-                    <a href="#">
-                        <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-jianshu"></use>
-                        </svg>
-                    </a>
-                    <a href="#">
-                        <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-weixin"></use>
-                        </svg>
-                    </a>
-                    <a href="#">
-                        <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-github"></use>
-                        </svg>
-                    </a>
-                    <a href="#">
-                        <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-weibo"></use>
-                        </svg>
-                    </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-jianshu"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weixin"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                </a>
             </div>
             <p class="email">Email: <a href="#">wyx8267@foxmail.com</a></p>
         </div>
     </div>
-    
+
     <main>
-        <div class="userCard">
+        <div class="userCard" data-x id="siteAbout">
             <h2>About Me</h2>
             <div class="pictureAndText clearfix">
                 <div class="picture">
@@ -76,8 +173,8 @@
             </div>
         </div>
     </main>
-    
-    <section class="skills">
+
+    <section class="skills" data-x id="siteSkills">
         <h2>Skills</h2>
         <ol class="clearfix">
             <li>
@@ -118,7 +215,7 @@
             </li>
         </ol>
     </section>
-    <section class="portfolio">
+    <section class="portfolio" data-x id="siteWorks">
         <h2>Portfolio</h2>
         <nav>
             <ol class="clearfix">
@@ -142,7 +239,13 @@
             </div>
         </div>
     </section>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
     <script src="./js/main.js"></script>
+    <script>
+        setTimeout(function () {
+            siteWelcome.classList.remove('active')
+        }, 3000);
+    </script>
 </body>
+
 </html>

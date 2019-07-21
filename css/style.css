@@ -1,35 +1,187 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
-    font-family: 'Roboto-Light',sans-serif;
+
+body {
+    font-family: 'Roboto-Light', sans-serif;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
 
-ul,ol{
+ul,
+ol {
     list-style: none;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: normal;
 }
 
-.clearfix::after{
+.clearfix::after {
     content: '';
     display: block;
     clear: both;
 }
 
-.banner{
-    background-color: #333;
-    height: 200px;
+
+[data-x].offset {
+    transform: translateY(100px);
 }
-.topInfo{
+
+[data-x] {
+    transform: translateY(0);
+    transition: all 0.5s;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(-30px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.topNavBar {
+    padding: 15px 0 12px 0;
+    position: fixed;
+    color: #eee;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.topNavBar.sticky {
+    background: #fff;
+    color: #333;
+    padding: 10px 0 12px 0;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
+}
+
+.topNavBar-inner {
+    padding: 0px 16px 0px 16px;
+}
+
+.topNavBar>a {
+    float: left;
+}
+
+.topNavBar .logo {
+    font-size: 24px;
+    font-family: "Arial black";
+    padding-top: 3px;
+    padding-bottom: 4px;
+}
+
+.topNavBar .logo .rs {
+    color: #ace;
+    padding-right: 4px;
+}
+
+.topNavBar .logo .card {
+    color: #aaa;
+}
+
+.topNavBar nav {
+    float: right;
+    padding-top: 5px;
+}
+
+.topNavBar nav>ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.topNavBar nav>ul>li {
+    float: left;
+    margin-left: 17px;
+    margin-right: 17px;
+    position: relative;
+}
+
+.topNavBar nav>ul>li>a {
+    font-size: 12px;
+    display: block;
+    font-weight: bold;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.topNavBar nav>ul>li.active>a::after,
+.topNavBar nav>ul>li.highlight>a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #333;
+    height: 3px;
+    animation: menuSlide .3s;
+}
+
+@keyframes menuSlide {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.topNavBar .submenu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: #fff;
+    color: #3d4451;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5)
+}
+
+.topNavBar .submenu>li {
+    white-space: nowrap;
+    padding: 5px 10px;
+}
+
+.topNavBar li.active>.submenu {
+    display: block;
+    animation: submenuSlide .3s;
+}
+
+@keyframes submunuSlide {
+    0% {
+        margin-right: 100%;
+    }
+
+    100% {
+        margin-right: 0;
+    }
+}
+
+.banner {
+    background-color: #333;
+    height: 230px;
+}
+
+.topInfo {
     border: 3px dashed #eee;
     max-width: 900px;
     margin: auto;
@@ -38,25 +190,31 @@ h1,h2,h3,h4,h5,h6{
     color: #fff;
     box-sizing: border-box;
 }
-.topInfo .topInfo-left{
+
+.topInfo .topInfo-left {
     float: left;
     margin: 20px auto 20px 20px;
 }
-.topInfo .topInfo-right{
+
+.topInfo .topInfo-right {
     float: right;
     margin: 20px 20px 20px auto;
 }
-.topInfo-left > h1{
+
+.topInfo-left>h1 {
     margin-bottom: 10px;
     font-size: 48px;
 }
-.topInfo-left > p{
+
+.topInfo-left>p {
     font-size: 26px;
 }
-.topInfo-right .media{
+
+.topInfo-right .media {
     text-align: center;
 }
-.topInfo-right .media a{
+
+.topInfo-right .media a {
     background-color: #333;
     display: inline-block;
     border-radius: 50%;
@@ -66,39 +224,45 @@ h1,h2,h3,h4,h5,h6{
     margin: 16px 0 16px 16px;
     transition: all 0.4s;
 }
-.topInfo-right .media svg{
+
+.topInfo-right .media svg {
     height: 30px;
     width: 30px;
     fill: #fff;
     vertical-align: top;
 }
-.topInfo-right .media svg:hover{
-    fill:#333;
+
+.topInfo-right .media svg:hover {
+    fill: #333;
 }
-.topInfo-right .media a:hover{
+
+.topInfo-right .media a:hover {
     background-color: #fff;
 }
-.topInfo-right > p{
+
+.topInfo-right>p {
     float: right;
     margin-top: 10px;
 }
 
-.userCard{
+.userCard {
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
     box-sizing: border-box;
 }
-.userCard > h2,
-.skills > h2,
-.portfolio > h2{
+
+.userCard>h2,
+.skills>h2,
+.portfolio>h2 {
     text-align: center;
     border-bottom: 3px dashed #eee;
     font-weight: 300;
     font-size: 32px;
 }
-.userCard .welcome{
+
+.userCard .welcome {
     background: #333;
     color: white;
     display: inline-block;
@@ -107,136 +271,161 @@ h1,h2,h3,h4,h5,h6{
     position: relative;
     margin-bottom: 10px;
 }
-.userCard .welcome .triangle{
+
+.userCard .welcome .triangle {
     position: absolute;
     display: block;
-    border:10px solid transparent;
+    border: 10px solid transparent;
     border-left-color: #333;
     border-top-width: 0px;
     left: 4px;
     top: 100%;
 }
-.userCard .pictureAndText{
+
+.userCard .pictureAndText {
     padding: 40px 0;
 }
-.userCard .picture{
+
+.userCard .picture {
     margin-left: 150px;
     float: left;
     width: 200px;
     height: 200px;
 }
-.userCard .picture img{
+
+.userCard .picture img {
     width: 100%;
 }
-.userCard .text{
+
+.userCard .text {
     float: left;
     margin-left: 100px;
     width: 300px;
 }
+
 .userCard .text dt,
-.userCard .text dd{
+.userCard .text dd {
     float: left;
     padding: 10px 0;
-    
+
 }
-.userCard .text dt{
+
+.userCard .text dt {
     width: 40%;
     font-weight: bold;
 }
-.userCard .text dd{
+
+.userCard .text dd {
     width: 60%;
 }
 
-section.skills{
+section.skills {
     max-width: 900px;
     margin: auto;
 }
-section.skills h3{
+
+section.skills h3 {
     font-size: 14px;
     line-height: 1.1;
     padding-right: 40px;
 }
-section.skills>ol{
+
+section.skills>ol {
     background-color: #fff;
     padding: 42px 20px 10px 50px;
     margin-top: 30px;
 }
-section.skills>ol>li{
+
+section.skills>ol>li {
     float: left;
     width: 50%;
     box-sizing: border-box;
     padding-right: 30px;
 }
-section.skills .progressBar{
+
+section.skills .progressBar {
     background-color: #aaa;
     height: 5px;
     border-radius: 5px;
     margin: 4px 0 40px;
 }
-section.skills .progressBar>.progress{
+
+section.skills .progressBar>.progress {
     height: 100%;
     width: 70%;
     background-color: #333;
     border-radius: 5px;
 }
 
-section.portfolio{
+section.portfolio {
     text-align: center;
     max-width: 900px;
     margin-bottom: 100px;
     margin: auto;
 }
-section.portfolio > nav{
+
+section.portfolio>nav {
     text-align: center;
     display: inline-block;
     vertical-align: top;
     margin-top: 32px;
 }
-section.portfolio > nav > ol{
+
+section.portfolio>nav>ol {
     margin: 0 auto;
     display: inline-block;
     vertical-align: top;
 }
-section.portfolio > nav > ol > li{
+
+section.portfolio>nav>ol>li {
     float: left;
     margin-left: 40px;
     cursor: pointer;
 }
-section.portfolio > nav > ol > li:nth-child(1){
+
+section.portfolio>nav>ol>li:nth-child(1) {
     margin-left: 0;
 }
-section.portfolio > nav .bar{
+
+section.portfolio>nav .bar {
     height: 5px;
     width: 260px;
     margin-bottom: 28px;
     border-radius: 5px;
 }
-section.portfolio > nav .bar-inner{
+
+section.portfolio>nav .bar-inner {
     height: 100%;
     background: #333;
     border-radius: 5px;
     transition: all 0.3s;
 }
-section.portfolio > nav .bar.state-1 .bar-inner{
+
+section.portfolio>nav .bar.state-1 .bar-inner {
     margin-left: 0;
     width: 22%;
 }
-section.portfolio > nav .bar.state-2 .bar-inner{
+
+section.portfolio>nav .bar.state-2 .bar-inner {
     margin-left: 71px;
     width: 35%;
 }
-section.portfolio > nav .bar.state-3 .bar-inner{
+
+section.portfolio>nav .bar.state-3 .bar-inner {
     margin-left: 188px;
     width: 23%;
 }
-section.portfolio .works{
+
+section.portfolio .works {
     position: relative;
     height: 500px;
 }
-section.portfolio .works > .big,
-section.portfolio .works > .small{
+
+section.portfolio .works>.big,
+section.portfolio .works>.small {
     position: absolute;
 }
-section.portfolio .works img{
+
+section.portfolio .works img {
     width: 100%;
 }
