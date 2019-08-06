@@ -255,7 +255,8 @@ h6 {
 
 .userCard>h2,
 .skills>h2,
-.portfolio>h2 {
+.portfolio>h2,
+.message>h2 {
     text-align: center;
     border-bottom: 3px dashed #eee;
     font-weight: 300;
@@ -364,68 +365,60 @@ section.portfolio {
     margin: auto;
 }
 
-section.portfolio>nav {
+section.portfolio h2 {
+    margin-bottom: 30px;
+}
+
+section.portfolio .swiper-container {
+    width: 668px;
+    height: 501px;
+}
+
+section.portfolio .swiper-button-prev,
+section.portfolio .swiper-button-next {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+section.portfolio .swiper-button-prev {
+    left: auto;
+    right: 100%;
+}
+
+section.portfolio .swiper-button-next {
+    right: auto;
+    left: 100%;
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+#postMessageForm {
+    max-width: 700px;
+    margin: 50px auto;
     text-align: center;
-    display: inline-block;
-    vertical-align: top;
-    margin-top: 32px;
 }
 
-section.portfolio>nav>ol {
+section.message {
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+section.message>ol {
+    max-width: 700px;
+    background: #fafafa;
     margin: 0 auto;
-    display: inline-block;
-    vertical-align: top;
+    border-top: 1px solid #ddd;
 }
 
-section.portfolio>nav>ol>li {
-    float: left;
-    margin-left: 40px;
-    cursor: pointer;
-}
-
-section.portfolio>nav>ol>li:nth-child(1) {
-    margin-left: 0;
-}
-
-section.portfolio>nav .bar {
-    height: 5px;
-    width: 260px;
-    margin-bottom: 28px;
-    border-radius: 5px;
-}
-
-section.portfolio>nav .bar-inner {
-    height: 100%;
-    background: #333;
-    border-radius: 5px;
-    transition: all 0.3s;
-}
-
-section.portfolio>nav .bar.state-1 .bar-inner {
-    margin-left: 0;
-    width: 22%;
-}
-
-section.portfolio>nav .bar.state-2 .bar-inner {
-    margin-left: 71px;
-    width: 35%;
-}
-
-section.portfolio>nav .bar.state-3 .bar-inner {
-    margin-left: 188px;
-    width: 23%;
-}
-
-section.portfolio .works {
-    position: relative;
-    height: 500px;
-}
-
-section.portfolio .works>.big,
-section.portfolio .works>.small {
-    position: absolute;
-}
-
-section.portfolio .works img {
-    width: 100%;
+section.message>ol>li {
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
 }
