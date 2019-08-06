@@ -384,12 +384,12 @@ section.portfolio .swiper-button-next {
 
 section.portfolio .swiper-button-prev {
     left: auto;
-    right: 100%;
+    right: 90%;
 }
 
 section.portfolio .swiper-button-next {
     right: auto;
-    left: 100%;
+    left: 90%;
 }
 
 .icon {
