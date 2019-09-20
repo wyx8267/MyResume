@@ -1,0 +1,13 @@
+.portfolio {
+    max-width: 900px;
+    margin-bottom: 100px;
+    margin: auto;
+
+    >h2 {
+        text-align: center;
+        border-bottom: 3px dashed #eee;
+        font-weight: 300;
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+}

@@ -1,0 +1,73 @@
+.userCard {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    box-sizing: border-box;
+
+    >h2 {
+        text-align: center;
+        border-bottom: 3px dashed #eee;
+        font-weight: 300;
+        font-size: 32px;
+    }
+
+    .pictureAndText {
+        padding: 40px 0;
+
+        .picture {
+            margin-left: 150px;
+            float: left;
+            width: 200px;
+            height: 200px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .text {
+            float: left;
+            margin-left: 100px;
+            width: 300px;
+
+            .welcome {
+                background: #333;
+                color: white;
+                display: inline-block;
+                padding: 4px 16px;
+                line-height: 22px;
+                position: relative;
+                margin-bottom: 10px;
+
+                .triangle {
+                    position: absolute;
+                    display: block;
+                    border: 10px solid transparent;
+                    border-left-color: #333;
+                    border-top-width: 0px;
+                    left: 4px;
+                    top: 100%;
+                }
+            }
+
+            >dl {
+
+                dt,
+                dd {
+                    float: left;
+                    padding: 10px 0;
+                }
+
+                dt {
+                    width: 40%;
+                    font-weight: bold;
+                }
+
+                dd {
+                    width: 60%;
+                }
+            }
+        }
+    }
+}

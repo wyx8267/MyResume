@@ -1,0 +1,73 @@
+.banner {
+    background-color: #333;
+    height: 200px;
+}
+
+.topInfo {
+    border: 3px dashed #eee;
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+    margin-top: -160px;
+    color: #fff;
+    box-sizing: border-box;
+
+    .topInfo-left {
+        float: left;
+        margin: 20px auto 20px 20px;
+
+        >h1 {
+            margin-bottom: 10px;
+            font-size: 48px;
+        }
+
+        >p {
+            font-size: 26px;
+        }
+    }
+
+    .topInfo-right {
+        float: right;
+        position: relative;
+        margin: 20px 20px 20px auto;
+
+        .media {
+            position: absolute;
+            right: 0;
+            text-align: center;
+
+            a {
+                background-color: #333;
+                display: inline-block;
+                border-radius: 50%;
+                width: 40px;
+                padding: 5px 0;
+                line-height: 30px;
+                margin: 16px 0 16px 16px;
+                transition: all 0.4s;
+
+                &:hover {
+                    background-color: #fff;
+                }
+
+                svg {
+                    height: 30px;
+                    width: 30px;
+                    fill: #fff;
+                    vertical-align: top;
+
+                    &:hover {
+                        fill: #333;
+                    }
+                }
+            }
+        }
+
+        .email {
+            margin-top: 80px;
+            margin-bottom: 5px;
+            font-size: 20px;
+            float: right;
+        }
+    }
+}
