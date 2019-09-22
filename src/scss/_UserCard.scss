@@ -7,7 +7,7 @@
 
     >h2 {
         text-align: center;
-        border-bottom: 3px dashed #eee;
+        border-bottom: 3px dashed #ccc;
         font-weight: 300;
         font-size: 32px;
     }
@@ -16,19 +16,30 @@
         padding: 40px 0;
 
         .picture {
-            margin-left: 150px;
+            margin-left: 100px;
             float: left;
-            width: 200px;
-            height: 200px;
+            width: 210px;
+            height: 270px;
+            position: relative;
 
             img {
-                width: 100%;
+                width: 200px;
+                position: absolute;
+            }
+            .back{
+                width: 200px;
+                height: 260px;
+                background-color: #ddd;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                z-index: -1;
             }
         }
 
         .text {
             float: left;
-            margin-left: 100px;
+            margin-left: 150px;
             width: 300px;
 
             .welcome {
@@ -57,6 +68,7 @@
                 dd {
                     float: left;
                     padding: 10px 0;
+                    font-size: 20px;
                 }
 
                 dt {

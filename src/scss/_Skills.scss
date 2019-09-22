@@ -1,0 +1,49 @@
+.skills {
+    max-width: 900px;
+    margin: auto;
+
+    >h2 {
+        text-align: center;
+        border-bottom: 3px dashed #ccc;
+        font-weight: 300;
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    >ol {
+        background-color: #fff;
+        padding: 10px 20px 10px 50px;
+        margin-top: 30px;
+
+        h3 {
+            font-size: 14px;
+            line-height: 1.1;
+            padding-right: 40px;
+        }
+
+        >li {
+            float: left;
+            width: 100%;
+            box-sizing: border-box;
+            padding-right: 30px;
+
+            .progressBar {
+                background-color: #aaa;
+                width: 50%;
+                height: 5px;
+                border-radius: 5px;
+                margin: 5px 0;
+
+                >.progress {
+                    height: 100%;
+                    width: 70%;
+                    background-color: #333;
+                    border-radius: 5px;
+                }
+            }
+            .skillInfo{
+                margin: 5px 0 20px;
+            }
+        }
+    }
+}

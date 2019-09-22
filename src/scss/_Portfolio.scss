@@ -5,9 +5,46 @@
 
     >h2 {
         text-align: center;
-        border-bottom: 3px dashed #eee;
+        border-bottom: 3px dashed #ccc;
         font-weight: 300;
         font-size: 32px;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
+    }
+
+    .projectList {
+
+        .projectItem {
+            padding: 20px 50px 20px 30px;
+            box-sizing: border-box;
+            max-width: 900px;
+            height: 240px;
+
+            &:not(:first-child) {
+                border-top: 2px solid #ddd;
+            }
+
+            img {
+                width: 240px;
+                vertical-align: top;
+                border: 2px dashed #777;
+                border-radius: 5px;
+            }
+
+            .picLeft,
+            .picRight {
+                width: 250px;
+                float: left;
+            }
+
+            .textRight,
+            .textLeft {
+                width: 550px;
+                float: left;
+            }
+
+            .picRight,.textRight{
+                margin-left: 20px;
+            }
+        }
     }
 }
