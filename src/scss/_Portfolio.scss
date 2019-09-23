@@ -24,7 +24,8 @@
             }
 
             img {
-                width: 240px;
+                width: 236px;
+                height: 176px;
                 vertical-align: top;
                 border: 2px dashed #777;
                 border-radius: 5px;
@@ -40,9 +41,54 @@
             .textLeft {
                 width: 550px;
                 float: left;
+
+                p {
+                    font-size: 20px;
+
+                    span {
+                        font-size: 18px;
+                        color: #777;
+                    }
+                }
+
+                .projectInfo {
+                    font-size: 14px;
+
+                    li {
+                        margin-top: 12px;
+                        line-height: 20px;
+                        &::before{
+                            content: '-';
+                            color: #777;
+                            margin-right: 5px;
+                            width: 5px;
+                            height: 5px;
+                            background-color: #777;
+                        }
+                    }
+                }
+
+                .projectSrc{
+                    margin-top: 10px;
+                    color: #777;
+                    font-size: 14px;
+                    font-weight: 700;
+                    display: flex;
+                    li{
+                        margin-right: 10px;
+                        padding: 0 5px;
+                        transition: all .4s;
+                        &:hover{
+                            color: #fff;
+                            background: #333;
+                            border-radius: 5px;
+                        }
+                    }
+                }
             }
 
-            .picRight,.textRight{
+            .picRight,
+            .textRight {
                 margin-left: 20px;
             }
         }

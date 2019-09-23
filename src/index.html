@@ -22,6 +22,11 @@
         </div>
         <div class="topInfo-right">
             <div class="media">
+                <a href="https://github.com/wyx8267">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                </a>
                 <a href="https://www.jianshu.com/u/2bdf8039c343">
                     <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-jianshu"></use>
@@ -30,11 +35,6 @@
                 <a href="#">
                     <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-weixin"></use>
-                    </svg>
-                </a>
-                <a href="https://github.com/wyx8267">
-                    <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-github"></use>
                     </svg>
                 </a>
             </div>
@@ -51,7 +51,7 @@
                     <div class="back"></div>
                 </div>
                 <div class="text">
-                    <span class="welcome">Hello
+                    <span class="welcome">正在求职中
                         <span class="triangle"></span>
                     </span>
                     <dl>
@@ -78,38 +78,59 @@
                 <div class="picLeft"><img src="./img/tomato.jpg" alt=""></div>
                 <div class="textRight">
                     <p>番茄Todo<span>——React</span></p>
-                    <ul>
-                        <li><a href="">项目预览</a></li>
-                        <li><a href="">项目源码</a></li>
+                    <ul class="projectInfo">
+                        <li>本项目为使用React实现的番茄时钟与Todolist。</li>
+                        <li>使用React-Router实现注册、登录页的路由，使用React-Redux实现事件的处理。</li>
+                        <li>各模块以组件形式组合，通过props传递数据，使用生命周期控制特定事件处理时机。</li>
+                        <li>代码使用Typescript，样式部分使用SCSS处理。</li>
+                    </ul>
+                    <ul class="projectSrc">
+                        <li><a href="https://wyx8267.github.io/react-tomato-todo/">项目预览</a></li>
+                        <li><a href="https://github.com/wyx8267/react-tomato-todo">项目源码</a></li>
                     </ul>
                 </div>
             </li>
             <li class="projectItem">
                 <div class="textLeft">
                     <p>CNODE社区<span>——Vue</span></p>
-                    <ul>
-                        <li><a href="">项目预览</a></li>
-                        <li><a href="">项目源码</a></li>
+                    <ul class="projectInfo">
+                        <li>本项目为使用Vue框架实现的技术社区.</li>
+                        <li>使用Router实现页面间路由跳转。</li>
+                        <li>使用Axios从API获取信息并通过列表渲染、条件渲染显示在页面。</li>
+                        <li>使用Vue的生命周期控制特定事件调用时机。</li>
+                    </ul>
+                    <ul class="projectSrc">
+                        <li><a href="https://wyx8267.github.io/vue-cnode/">项目预览</a></li>
+                        <li><a href="https://github.com/wyx8267/vue-cnode">项目源码</a></li>
                     </ul>
                 </div>
                 <div class="picRight"><img src="./img/cnode.jpg" alt=""></div>
             </li>
             <li class="projectItem">
-                <div class="picLeft"><img src="./img/tomato.jpg" alt=""></div>
+                <div class="picLeft"><img src="./img/qqmusic.jpg" alt=""></div>
                 <div class="textRight">
                     <p>手机端音乐播放器<span>——原生JS</span></p>
-                    <ul>
-                        <li><a href="">项目预览</a></li>
-                        <li><a href="">项目源码</a></li>
+                    <ul class="projectInfo">
+                        <li>本项目是以原生JavaScript实现的手机端音乐播放器。</li>
+                        <li>通过阅读API文档及使用Fetch API分析处理JSON格式数据以实现推荐页、排行榜、音源链接的获取。</li>
+                        <li>使用SCSS处理样式，通过配置Webpack打包项目。</li>
+                    </ul>
+                    <ul class="projectSrc">
+                        <li><a href="https://wyx8267.github.io/qq-music/index.html">项目预览</a></li>
+                        <li><a href="https://github.com/wyx8267/qq-music">项目源码</a></li>
                     </ul>
                 </div>
             </li>
             <li class="projectItem">
                 <div class="textLeft">
-                    <p>自动画一只狐狸需要几个步骤<span>——CSS & JS</span></p>
-                    <ul>
-                        <li><a href="">项目预览</a></li>
-                        <li><a href="">项目源码</a></li>
+                    <p>画一只狐狸<span>——jQuery</span></p>
+                    <ul class="projectInfo">
+                        <li>本项目实现了CSS代码的自动显示及同步渲染</li>
+                        <li>并使用jQuery操作DOM以处理动画速度的选取事件</li>
+                    </ul>
+                    <ul class="projectSrc">
+                        <li><a href="https://wyx8267.github.io/draw-a-fox/index.html">项目预览</a></li>
+                        <li><a href="https://github.com/wyx8267/draw-a-fox">项目源码</a></li>
                     </ul>
                 </div>
                 <div class="picRight"><img src="./img/fox.jpg" alt=""></div>
@@ -118,18 +139,25 @@
                 <div class="picLeft"><img src="./img/canvas.jpg" alt=""></div>
                 <div class="textRight">
                     <p>画板<span>——CANVAS</span></p>
-                    <ul>
-                        <li><a href="">项目预览</a></li>
-                        <li><a href="">项目源码</a></li>
+                    <ul class="projectInfo">
+                        <li>项目使用CANVAS API实现可随意涂画的在线画板。</li>
+                        <li>实现了画笔粗细、颜色，画笔与橡皮的切换，画布清空及图画保存功能。</li>
+                    </ul>
+                    <ul class="projectSrc">
+                        <li><a href="https://wyx8267.github.io/canvas-demo/index.html">项目预览</a></li>
+                        <li><a href="https://github.com/wyx8267/canvas-demo">项目源码</a></li>
                     </ul>
                 </div>
             </li>
             <li class="projectItem">
                 <div class="textLeft">
                     <p>键盘任意门<span>——原生JS</span></p>
-                    <ul>
-                        <li><a href="">项目预览</a></li>
-                        <li><a href="">项目源码</a></li>
+                    <ul class="projectInfo">
+                        <li>本项目通过生成键盘与Hash表一一对应，实现按键跳转对应网页及链接的编辑。</li>
+                    </ul>
+                    <ul class="projectSrc">
+                        <li><a href="https://wyx8267.github.io/start-website/index.html">项目预览</a></li>
+                        <li><a href="https://github.com/wyx8267/start-website">项目源码</a></li>
                     </ul>
                 </div>
                 <div class="picRight"><img src="./img/keyboard.jpg" alt=""></div>
@@ -142,45 +170,51 @@
         <ol class="clearfix">
             <li>
                 <h3>HTML 5 &amp; CSS 3</h3>
-                <div class="progressBar">
-                    <div class="progress" style="width: 80%"></div>
+                <div class="skillInfo">
+                    <ul>
+                        <li></li>
+                    </ul>
                 </div>
-                <div class="skillInfo">111</div>
             </li>
             <li>
                 <h3>JavaScript</h3>
-                <div class="progressBar">
-                    <div class="progress" style="width: 70%"></div>
+                <div class="skillInfo">
+                    <ul>
+                        <li></li>
+                    </ul>
                 </div>
-                <div class="skillInfo">111</div>
             </li>
             <li>
                 <h3>jQuery</h3>
-                <div class="progressBar">
-                    <div class="progress" style="width: 40%"></div>
+                <div class="skillInfo">
+                    <ul>
+                        <li></li>
+                    </ul>
                 </div>
-                <div class="skillInfo">111</div>
             </li>
             <li>
                 <h3>Vue</h3>
-                <div class="progressBar">
-                    <div class="progress" style="width: 60%"></div>
+                <div class="skillInfo">
+                    <ul>
+                        <li></li>
+                    </ul>
                 </div>
-                <div class="skillInfo">111</div>
             </li>
             <li>
                 <h3>React</h3>
-                <div class="progressBar">
-                    <div class="progress" style="width: 50%"></div>
+                <div class="skillInfo">
+                    <ul>
+                        <li></li>
+                    </ul>
                 </div>
-                <div class="skillInfo">111</div>
             </li>
             <li>
                 <h3>HTTP</h3>
-                <div class="progressBar">
-                    <div class="progress" style="width: 60%"></div>
+                <div class="skillInfo">
+                    <ul>
+                        <li></li>
+                    </ul>
                 </div>
-                <div class="skillInfo">111</div>
             </li>
         </ol>
     </section>
