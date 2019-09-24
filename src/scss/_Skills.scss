@@ -11,12 +11,20 @@
     }
 
     >ol {
-        padding: 10px 20px 10px 50px;
+        padding: 10px 50px;
         margin-top: 30px;
 
         h3 {
-            font-size: 20px;
+            font-size: 18px;
             line-height: 1.1;
+
+            &::before {
+                content: '-';
+                color: #777;
+                margin-right: 8px;
+                width: 5px;
+                background-color: #777;
+            }
         }
 
         >li {
@@ -24,24 +32,15 @@
             width: 100%;
             box-sizing: border-box;
             padding-right: 30px;
-
+            margin-left: 16px;
 
             .skillInfo {
                 margin: 5px 0 20px;
-                padding-right: 40px;
+                padding-left: 16px;
 
                 li {
                     margin-top: 12px;
                     line-height: 20px;
-
-                    &::before {
-                        content: '-';
-                        color: #777;
-                        margin-right: 5px;
-                        width: 5px;
-                        height: 5px;
-                        background-color: #777;
-                    }
                 }
             }
         }
