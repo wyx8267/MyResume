@@ -14,9 +14,10 @@
         padding: 10px 50px;
         margin-top: 30px;
 
-        h3 {
+        h5 {
             font-size: 18px;
             line-height: 1.1;
+            font-weight: 600;
 
             &::before {
                 content: '-';
@@ -41,6 +42,9 @@
                 li {
                     margin-top: 12px;
                     line-height: 20px;
+                    b{
+                        color: #333;
+                    }
                 }
             }
         }
