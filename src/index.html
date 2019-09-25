@@ -7,6 +7,64 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>王宇欣-应聘前端工程师-2019</title>
     <script src="//at.alicdn.com/t/font_1270182_qjsgcu927we.js"></script>
+    <style>
+        .site-welcome {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ccc;
+            z-index: 1;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .site-welcome.active {
+            display: flex;
+        }
+
+        .loading {
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+
+        .loading::before,
+        .loading::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            background: #000;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            animation: s 1.5s linear infinite;
+        }
+
+        .loading::after {
+            animation-delay: 1s
+        }
+
+        @keyframes s {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 1;
+            }
+
+            100% {
+                width: 75px;
+                height: 75px;
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -94,7 +152,7 @@
                 <div class="textLeft">
                     <p>CNODE社区<span>——Vue</span></p>
                     <ul class="projectInfo">
-                        <li>本项目为使用<b>Vue</b>框架实现的技术社区.</li>
+                        <li>本项目为使用<b>Vue</b>框架实现的技术社区。</li>
                         <li>使用<b>Router</b>实现页面间<b>路由跳转</b>。</li>
                         <li>使用<b>Axios</b>从API获取信息并通过<b>列表渲染、条件渲染</b>显示在页面。</li>
                         <li>使用Vue的<b>生命周期</b>控制特定事件调用时机。</li>
@@ -123,9 +181,9 @@
             </li>
             <li class="projectItem">
                 <div class="textLeft">
-                    <p>画一只狐狸<span>——jQuery</span></p>
+                    <p>图画自动描绘<span>——jQuery</span></p>
                     <ul class="projectInfo">
-                        <li>本项目实现了<b>CSS代码</b>的<b>自动显示及同步渲染</b></li>
+                        <li>本项目实现了<b>CSS代码</b>的<b>自动显示及同步渲染。</b></li>
                         <li>并使用<b>jQuery</b>操作<b>DOM</b>以处理动画速度选取事件。</li>
                     </ul>
                     <ul class="projectSrc">
@@ -151,7 +209,7 @@
             </li>
             <li class="projectItem">
                 <div class="textLeft">
-                    <p>键盘任意门<span>——原生JS</span></p>
+                    <p>键盘式导航网站<span>——原生JS</span></p>
                     <ul class="projectInfo">
                         <li>本项目通过生成键盘与<b>Hash表</b>一一对应，实现按键跳转对应网页及链接的编辑。</li>
                     </ul>
@@ -226,6 +284,11 @@
         </ol>
     </section>
 
+    <script>
+        setTimeout(function () {
+            siteWelcome.classList.remove('active')
+        }, 3000);
+    </script>
 </body>
 
 </html>
