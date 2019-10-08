@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>王宇欣-应聘前端工程师-2019</title>
+    <script src="//at.alicdn.com/t/font_1270182_qjsgcu927we.js"></script>
+    <style>
+        .site-welcome {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ccc;
+            z-index: 1;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .site-welcome.active {
+            display: flex;
+        }
+
+        .loading {
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+
+        .loading::before,
+        .loading::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            background: #000;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            animation: s 1.5s linear infinite;
+        }
+
+        .loading::after {
+            animation-delay: 1s
+        }
+
+        @keyframes s {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 1;
+            }
+
+            100% {
+                width: 75px;
+                height: 75px;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="site-welcome active" id="siteWelcome">
+        <div class="loading"></div>
+    </div>
+
+    <div class="banner"></div>
+    <div class="topInfo clearfix">
+        <div class="topInfo-left">
+            <h1>王宇欣</h1>
+            <p>前端开发工程师</p>
+        </div>
+        <div class="topInfo-right">
+            <div class="media">
+                <a href="https://github.com/wyx8267">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                </a>
+                <a href="https://www.jianshu.com/u/2bdf8039c343">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-jianshu"></use>
+                    </svg>
+                </a>
+                <!-- <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weixin"></use>
+                    </svg>
+                </a> -->
+            </div>
+            <p class="email">Email: <a href="#">wyx8267@foxmail.com</a></p>
+        </div>
+    </div>
+
+    <main>
+        <div class="userCard" data-x id="siteAbout">
+            <h2>About Me</h2>
+            <div class="pictureAndText clearfix">
+                <div class="picture">
+                    <img src="3525bfcfe0bcdf330f9b1291508118e5.jpg" alt="头像">
+                    <div class="back"></div>
+                </div>
+                <div class="text">
+                    <span class="welcome">求职中
+                        <span class="triangle"></span>
+                    </span>
+                    <dl>
+                        <dt>姓名</dt>
+                        <dd>王宇欣</dd>
+                        <dt>年龄</dt>
+                        <dd>23</dd>
+                        <dt>所在城市</dt>
+                        <dd>成都</dd>
+                        <dt>毕业学校</dt>
+                        <dd>中国海洋大学</dd>
+                        <dt>联系电话</dt>
+                        <dd>19950800208</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="portfolio" data-x id="siteWorks">
+        <h2>Portfolio</h2>
+        <ul class="projectList">
+            <li class="projectItem">
+                <div class="picLeft"><img src="069fa2964513e718c827b0c18b3c40de.jpg" alt=""></div>
+                <div class="textRight">
+                    <p>番茄Todo<span>——React</span></p>
+                    <ul class="projectInfo">
+                        <li>本项目为使用<b>React</b>实现的番茄时钟与Todolist。</li>
+                        <li>使用<b>React-Router</b>实现注册、登录页的路由，使用<b>React-Redux</b>实现事件的处理。</li>
+                        <li>各模块由<b>组件</b>组合，通过<b>props</b>传递数据，使用<b>生命周期</b>控制特定事件处理时机。</li>
+                        <li>功能模块代码使用<b>Typescript</b>，样式使用<b>SCSS</b>预处理。</li>
+                    </ul>
+                    <ul class="projectSrc">
+                        <li><a href="https://wyx8267.github.io/react-tomato-todo/">项目预览</a></li>
+                        <li><a href="https://github.com/wyx8267/react-tomato-todo">项目源码</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="projectItem">
+                <div class="textLeft">
+                    <p>CNODE社区<span>——Vue</span></p>
+                    <ul class="projectInfo">
+                        <li>本项目为使用<b>Vue</b>框架实现的技术社区。</li>
+                        <li>使用<b>Router</b>实现页面间<b>路由跳转</b>。</li>
+                        <li>使用<b>Axios</b>从API获取信息并通过<b>列表渲染、条件渲染</b>显示在页面。</li>
+                        <li>使用Vue的<b>生命周期</b>控制特定事件调用时机。</li>
+                    </ul>
+                    <ul class="projectSrc">
+                        <li><a href="https://wyx8267.github.io/vue-cnode/">项目预览</a></li>
+                        <li><a href="https://github.com/wyx8267/vue-cnode">项目源码</a></li>
+                    </ul>
+                </div>
+                <div class="picRight"><img src="f8ffbebb7ada3965a7a9cad82f5eb2ca.jpg" alt=""></div>
+            </li>
+            <li class="projectItem">
+                <div class="picLeft"><img src="8c3a9a0d3fc861ce3b3a8213069b809e.jpg" alt=""></div>
+                <div class="textRight">
+                    <p>手机端音乐播放器<span>——原生JS</span></p>
+                    <ul class="projectInfo">
+                        <li>本项目是以<b>原生JavaScript</b>实现的手机端音乐播放器。</li>
+                        <li>通过阅读API文档及使用<b>Fetch API</b>分析处理<b>JSON</b>格式数据以实现推荐页、排行榜、音源链接的获取。</li>
+                        <li>使用<b>SCSS</b>处理样式，通过配置<b>Webpack</b>打包项目。</li>
+                    </ul>
+                    <ul class="projectSrc">
+                        <li><a href="https://wyx8267.github.io/qq-music/index.html">项目预览</a></li>
+                        <li><a href="https://github.com/wyx8267/qq-music">项目源码</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="projectItem">
+                <div class="textLeft">
+                    <p>图画自动描绘<span>——jQuery</span></p>
+                    <ul class="projectInfo">
+                        <li>本项目实现了<b>CSS代码</b>的<b>自动显示及同步渲染。</b></li>
+                        <li>并使用<b>jQuery</b>操作<b>DOM</b>以处理动画速度选取事件。</li>
+                    </ul>
+                    <ul class="projectSrc">
+                        <li><a href="https://wyx8267.github.io/draw-a-fox/index.html">项目预览</a></li>
+                        <li><a href="https://github.com/wyx8267/draw-a-fox">项目源码</a></li>
+                    </ul>
+                </div>
+                <div class="picRight"><img src="cd834dfc1b6730b684c16a635ed4a8f1.jpg" alt=""></div>
+            </li>
+            <li class="projectItem">
+                <div class="picLeft"><img src="259df5dbef6951c3640db743832967ca.jpg" alt=""></div>
+                <div class="textRight">
+                    <p>画板<span>——CANVAS</span></p>
+                    <ul class="projectInfo">
+                        <li>项目使用<b>CANVAS API</b>实现可随意涂画的在线画板。</li>
+                        <li>实现了<b>画笔粗细、颜色、橡皮</b>的切换，<b>画布清空</b>及<b>图画保存</b>功能。</li>
+                    </ul>
+                    <ul class="projectSrc">
+                        <li><a href="https://wyx8267.github.io/canvas-demo/index.html">项目预览</a></li>
+                        <li><a href="https://github.com/wyx8267/canvas-demo">项目源码</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="projectItem">
+                <div class="textLeft">
+                    <p>键盘式导航网站<span>——原生JS</span></p>
+                    <ul class="projectInfo">
+                        <li>本项目通过生成键盘与<b>Hash表</b>一一对应，实现按键跳转对应网页及链接的编辑。</li>
+                    </ul>
+                    <ul class="projectSrc">
+                        <li><a href="https://wyx8267.github.io/start-website/index.html">项目预览</a></li>
+                        <li><a href="https://github.com/wyx8267/start-website">项目源码</a></li>
+                    </ul>
+                </div>
+                <div class="picRight"><img src="4c6bbb43f55c02b900a4e764fd9678bb.jpg" alt=""></div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="skills" data-x id="siteSkills">
+        <h2>Skills</h2>
+        <ol class="clearfix">
+            <li>
+                <h5>HTML 5 &amp; CSS 3</h5>
+                <div class="skillInfo">
+                    <ul>
+                        <li>掌握常用标签的使用场景，熟悉<b>HTML5新特性</b>，了解<b>HTML语义化</b>思想。</li>
+                        <li>熟悉<b>盒模型</b>、<b>文档流</b>、<b>BFC</b>等核心概念，了解<b>CSS3动画</b>、<b>Flex布局</b>、<b>响应式</b>等常用技术，能够根据设计图还原网页。
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <h5>JavaScript</h5>
+                <div class="skillInfo">
+                    <ul>
+                        <li>熟悉原生JavaScript，熟悉<b>数据基本类型</b>、<b>函数与作用域</b>、<b>JSON</b>、<b>Promise</b>等基本知识。了解<b>ES6语法</b>、<b>this</b>的使用。
+                        </li>
+                        <li>了解重要概念例如：<b>闭包、原型链、面向对象、异步操作</b>。</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <h5>Vue</h5>
+                <div class="skillInfo">
+                    <ul>
+                        <li>熟悉<b>组件、事件绑定、条件渲染、列表渲染</b>的使用。</li>
+                        <li>了解<b>生命周期</b>钩子函数、组件间<b>通信方式</b>、<b>Vuex</b>、<b>VueRouter</b>。</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <h5>React</h5>
+                <div class="skillInfo">
+                    <ul>
+                        <li>熟悉<b>组件</b>的使用、了解<b>生命周期</b>函数及<b>组件间通信</b>。了解<b>Redux</b>、<b>React-router</b>的使用。</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <h5>HTTP</h5>
+                <div class="skillInfo">
+                    <ul>
+                        <li>熟悉常见<b>HTTP状态码</b>含义、常见的<b>缓存</b>方式，了解<b>GET</b>和<b>POST</b>的使用。</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <h5>其他</h5>
+                <div class="skillInfo">
+                    <ul>
+                        <li>能配置出基本的<b>Webpack</b>用以打包项目和<b>样式的热加载</b>。</li>
+                        <li>习惯使用<b>git</b>进行项目版本管理，了解基本的网页项目向github部署的方式。</li>
+                        <li>英语水平：<b>CET-6 532分</b>，有英文文档阅读能力。</li>
+                    </ul>
+                </div>
+            </li>
+        </ol>
+    </section>
+
+    <script>
+        document.onreadystatechange = completeLoading;
+        function completeLoading() {
+            if (document.readyState == "complete") {
+                siteWelcome.classList.remove('active')
+            }
+        }
+    </script>
+<script type="text/javascript" src="0235-bundle.js"></script></body>
+
+</html>
