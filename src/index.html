@@ -285,9 +285,12 @@
     </section>
 
     <script>
-        setTimeout(function () {
-            siteWelcome.classList.remove('active')
-        }, 3000);
+        document.onreadystatechange = completeLoading;
+        function completeLoading() {
+            if (document.readyState == "complete") {
+                siteWelcome.classList.remove('active')
+            }
+        }
     </script>
 </body>
 
